@@ -4,7 +4,7 @@
     "target": {
       "namespace": "android_app",
       "package_name": "com.jinwooda.mobile",
-      "sha256_cert_fingerprints": ["REPLACE_ANDROID_SHA256_FINGERPRINT"]
+      "sha256_cert_fingerprints": ["A9:1F:CE:25:23:87:02:0E:2A:DF:D6:86:C6:B7:8D:5A:1A:5B:FD:1B:39:38:B9:64:6A:67:95:51:BD:B6:D1:DC"]
     }
   }
 ]
