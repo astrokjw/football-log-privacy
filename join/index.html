@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Football Log — 크루 초대 / Crew invite</title>
+<style>
+  :root { color-scheme: light dark; --bg:#E7EBF1; --panel:#fff; --ink:#0D1626; --muted:#64748B; --line:#DBE2EA; --accent:#A3E635; --accentBorder:#8DCB24; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0F1826; --panel:#1B2A3D; --ink:#E7ECF3; --muted:#8B99AC; --line:rgba(255,255,255,.10); } }
+  * { box-sizing: border-box; }
+  body {
+    margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
+    padding:2rem 1.25rem; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; line-height:1.55;
+  }
+  .card { width:100%; max-width:420px; background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:1.75rem 1.5rem; }
+  h1 { font-size:1.25rem; margin:0 0 .35rem; }
+  p { margin:.5rem 0; color:var(--muted); font-size:.95rem; }
+  .code { display:block; margin:1.1rem 0; padding:.85rem; border:1px dashed var(--line); border-radius:12px;
+    font:700 1.5rem/1.2 ui-monospace,SFMono-Regular,Menlo,monospace; letter-spacing:.18em; text-align:center; color:var(--ink); }
+  .code.none { font-size:.95rem; letter-spacing:0; font-weight:400; color:var(--muted); }
+  a.btn { display:block; margin:.6rem 0 0; padding:.8rem 1rem; border-radius:999px; text-align:center;
+    text-decoration:none; font-weight:700; font-size:.95rem; border:1px solid var(--line); color:var(--ink); }
+  a.btn.primary { background:var(--accent); border-color:var(--accentBorder); color:#0D1626; }
+  .stores { display:flex; gap:.6rem; margin-top:.6rem; }
+  .stores a { flex:1; }
+  .foot { margin-top:1.25rem; font-size:.8rem; }
+  .foot a { color:inherit; }
+</style>
+</head>
+<body>
+<div class="card">
+  <h1 id="title">크루 초대</h1>
+  <p id="lead">아래 코드로 Football Log 크루에 참여할 수 있습니다.</p>
+
+  <strong class="code" id="code">—</strong>
+
+  <a class="btn primary" id="open" href="#">앱에서 열기</a>
+  <div class="stores">
+    <a class="btn" id="ios" href="https://apps.apple.com/app/id0000000000">App Store</a>
+    <a class="btn" id="android" href="https://play.google.com/store/apps/details?id=com.jinwooda.mobile">Google Play</a>
+  </div>
+
+  <p class="foot">
+    앱을 설치한 뒤 <b>설정 → 계정 → 크루 참여</b>에서 위 코드를 입력하세요.<br />
+    <a href="/">개인정보처리방침</a>
+  </p>
+</div>
+
+<script>
+  // The code can arrive as /join/AB3XZ9 or /join/?code=AB3XZ9 — accept both, same as the app.
+  var path = location.pathname.replace(/\/+$/, '').split('/');
+  var fromPath = path[path.length - 1];
+  var code = (new URLSearchParams(location.search).get('code') || (fromPath && fromPath !== 'join' ? fromPath : ''))
+    .trim().toUpperCase();
+
+  var el = document.getElementById('code');
+  if (code) {
+    el.textContent = code;
+    // Custom scheme, not the https link: tapping that here would just reload this page on a
+    // device where the universal link didn't take.
+    document.getElementById('open').href = 'footballlog://join/' + encodeURIComponent(code);
+  } else {
+    el.className = 'code none';
+    el.textContent = '초대 코드가 링크에 없습니다 — 보낸 사람에게 코드를 직접 받아 앱에 입력하세요.';
+    document.getElementById('open').href = 'footballlog://';
+  }
+
+  // English for anyone not on a Korean device, without shipping a whole i18n layer.
+  if (!(navigator.language || '').toLowerCase().startsWith('ko')) {
+    document.documentElement.lang = 'en';
+    document.getElementById('title').textContent = 'Crew invite';
+    document.getElementById('lead').textContent = 'Use this code to join a crew on Football Log.';
+    document.getElementById('open').textContent = 'Open in the app';
+    document.querySelector('.foot').innerHTML =
+      'After installing, enter the code under <b>Settings → Account → Join a Crew</b>.<br />' +
+      '<a href="/">Privacy policy</a>';
+    if (!code) el.textContent = 'No invite code in this link — ask whoever sent it for the code and enter it in the app.';
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+# Apple refuses an association file that isn't served as JSON, and the file has no
+# extension for a host to infer that from — this is the reason GitHub Pages can't host it.
+/.well-known/apple-app-site-association
+  Content-Type: application/json

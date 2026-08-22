@@ -1,0 +1,3 @@
+# Invite links carry the code as a path segment (/join/AB3XZ9). Serve the landing page for
+# any of them rather than 404ing; the page reads the code out of the URL itself.
+/join/*  /join/index.html  200
