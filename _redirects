@@ -1,3 +1,6 @@
 # Invite links carry the code as a path segment (/join/AB3XZ9). Serve the landing page for
 # any of them rather than 404ing; the page reads the code out of the URL itself.
-/join/*  /join/index.html  200
+# Target must live outside /join/ — Cloudflare Pages silently drops a /join/* -> /join/... rule
+# as a self-matching infinite-loop risk (it collapses /join/index.html back to /join/, which
+# matches the wildcard again).
+/join/*  /join.html  200
