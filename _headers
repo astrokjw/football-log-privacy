@@ -7,6 +7,12 @@
 # its extension-less form, and that redirect strips whatever the browser actually requested
 # (/join/AB3XZ9 -> /join), which breaks the /join/* rewrite in _redirects. Serving this file
 # without an extension keeps it out of that rewrite entirely — but it means the host can't
-# infer the content type, so it has to be set explicitly here.
+# infer the content type, so it has to be set explicitly. _headers matches on the path the
+# visitor actually requested, not the _redirects rewrite target, so this has to list every
+# path that rewrites to join-landing rather than just /join-landing itself.
 /join-landing
+  Content-Type: text/html; charset=utf-8
+/join
+  Content-Type: text/html; charset=utf-8
+/join/*
   Content-Type: text/html; charset=utf-8
