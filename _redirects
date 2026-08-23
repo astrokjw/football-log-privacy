@@ -1,6 +1,9 @@
 # Invite links carry the code as a path segment (/join/AB3XZ9). Serve the landing page for
 # any of them rather than 404ing; the page reads the code out of the URL itself.
-# Target must live outside /join/ — Cloudflare Pages silently drops a /join/* -> /join/... rule
-# as a self-matching infinite-loop risk (it collapses /join/index.html back to /join/, which
-# matches the wildcard again).
-/join/*  /join.html  200
+# Target is extension-less (join-landing, not join.html) on purpose — see _headers. Cloudflare
+# Pages' clean-URL redirect for *.html files collapses the rewrite target back down to a path
+# that either re-matches this same wildcard (silently drops the rule as a "loop") or, if it
+# doesn't re-match, still redirects the browser there and strips the invite code the visitor
+# actually requested. An extension-less target isn't clean-URL-redirected, so neither happens.
+/join/*  /join-landing  200
+/join    /join-landing  200
