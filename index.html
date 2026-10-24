@@ -4,6 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Football Log — Privacy Policy / 개인정보처리방침</title>
+<meta name="description" content="Football Log privacy information: local match data, optional account and social sign-in, crew sharing and Voice processing.">
 <style>
   :root { color-scheme: light dark; }
   body {
@@ -29,28 +30,36 @@
 </style>
 </head>
 <body>
+<nav aria-label="Site navigation"><a href="/about">Football Log — App overview / 앱 소개</a></nav>
 
-<div class="lang-block">
+<div class="lang-block" id="privacy-ko">
 <h1>Football Log 개인정보처리방침</h1>
-<p class="meta">시행일: 2026년 8월 18일 (최종 수정: 2026년 8월 20일)</p>
+<p class="meta">시행일: 2026년 8월 18일 (최종 수정: 2026년 10월 23일)</p>
 
 <p>Football Log("본 앱")는 축구 코치와 지도자가 경기 기록, 이벤트/스탯 추적, 전술 보드를 관리할 수 있도록 돕는 앱입니다.</p>
 
 <h2>1. 기본은 로컬 저장</h2>
-<p>별도로 로그인하지 않는 한, 팀/선수/매치/이벤트/전술 보드/xG 설정 등 모든 데이터는 사용자의 기기에만 저장됩니다. 이 데이터를 저희 서버로 전송하거나 수집하지 않습니다.</p>
+<p>수동으로 입력한 팀/선수/매치/이벤트/전술 보드/xG 설정은 기본적으로 기기에 저장됩니다. 크루 공유나 클라우드 음성 해석처럼 사용자가 선택한 온라인 기능에서는 해당 기능에 필요한 정보가 아래 설명과 같이 처리됩니다.</p>
 
 <h2>2. 계정 로그인(선택 사항) 시 수집하는 정보</h2>
-<p>계정 기능은 완전히 선택 사항이며, 다른 사람과 매치를 함께 기록하고 싶을 때만 사용합니다. 로그인 시 다음 정보를 수집합니다:</p>
+<p>수동 경기 기록에 로그인은 필수가 아닙니다. 크루 공유, 계정에 연결된 구매 권한, 이용 가능한 클라우드 음성 기능 등에는 계정을 사용합니다. 로그인 시 다음 정보를 처리합니다:</p>
 <ul>
-  <li><strong>이메일 주소</strong> — 로그인용 일회성 인증 코드를 보내는 용도로만 사용합니다.</li>
+  <li><strong>이메일 주소</strong> — 계정 식별과 관리, 이메일 로그인용 일회성 인증 코드 전송에 사용합니다.</li>
   <li><strong>표시 이름</strong> — 사용자가 직접 설정하는 이름으로, 같은 그룹의 다른 사용자에게 보입니다.</li>
-  <li><strong>공유한 매치 데이터</strong> — 사용자가 명시적으로 그룹에 공유하기로 선택한 매치의 이벤트와 경기 시간 정보가 서버에 저장됩니다. 공유하지 않은 매치는 서버에 올라가지 않습니다.</li>
+  <li><strong>공유한 매치 데이터</strong> — 사용자가 명시적으로 그룹에 공유하기로 선택한 매치의 이벤트와 경기 시간 정보가 서버에 저장됩니다. 공유하지 않은 매치 전체를 자동으로 업로드하지 않습니다. 선택적 음성 기능의 텍스트 처리는 아래 설명을 따릅니다.</li>
   <li><strong>팀 로스터</strong> — 매치를 한 번 공유하거나 가져오면, 그 팀의 로스터(선수 이름, 등번호, 포지션, 주발)가 그룹의 다른 구성원과 계속 동기화됩니다. 이후 로컬에서 선수 정보를 추가·수정하면 자동으로 서버에 반영되어 그룹 구성원 모두에게 보입니다. 앱 내에서 특정 선수를 공유 로스터에서 제거할 수도 있습니다.</li>
 </ul>
-<p>광고, 추적용 식별자, 분석 도구(analytics)를 사용하지 않으며, 그 외의 개인정보는 수집하지 않습니다.</p>
+<p>광고용으로 개인 정보를 판매하지 않습니다. 구매 권한과 서비스 운영에 필요한 정보 처리는 아래와 같습니다.</p>
 
+<h2>2A. Google 및 Apple 로그인</h2>
+<p>이 기능을 선택하면 제공자의 계정 식별자와 이메일 주소를 Supabase 인증 서비스를 통해 처리합니다. Google은 이름과 프로필 사진 등 기본 프로필 정보를 제공할 수 있습니다. Apple의 이메일 숨기기를 선택하면 실제 이메일 대신 중계 주소를 받을 수 있습니다. 이 정보는 로그인, 계정 연결 및 계정 관리에 사용하며, 로그인 세션과 제공자 연결 정보는 앱의 인증 시스템에 보관됩니다. Google 비밀번호를 받지 않으며 Gmail, Drive, 연락처, 캘린더 접근 권한은 요청하지 않습니다.</p>
+<p>앱에 로그인한 상태에서 다른 로그인 방법을 연결하면 현재 Football Log 계정에 연결됩니다. 서로 다른 기존 계정을 자동으로 합치지는 않습니다. Google 계정의 연결된 앱 관리 또는 Apple 계정의 Apple로 로그인 설정에서 제공자 접근을 취소할 수 있습니다. 제공자 연결 해제만으로 Football Log 계정과 공유 기록이 자동 삭제되지는 않습니다.</p>
+<h2>2B. 선택적 음성 기능과 구매</h2>
+<p>음성 기능이 제공되는 빌드에서 사용자가 동의하면, 기기의 음성 인식 서비스가 음성을 텍스트로 변환합니다. 인터넷 음성 인식은 Apple 또는 기기에 설정된 Google 등 음성 서비스로 오디오를 보낼 수 있습니다. Football Log의 클라우드 해석은 인식한 텍스트와 언어 정보를 Supabase 서버를 거쳐 Google Gemini로 보내 경기 이벤트 후보를 만듭니다. Football Log는 마이크 오디오를 Gemini로 보내지 않습니다. 앱의 계정 식별자, 요청 식별자와 사용량 정보는 인증, 사용 한도와 중복 요청 제어에 사용됩니다. 텍스트에 직접 말하거나 입력한 개인정보는 그 텍스트에 포함될 수 있습니다.</p>
+<p>음성 전송 동의는 앱의 Voice 도움말에서 철회할 수 있으며, 기기 설정에서 마이크·음성 인식 권한을 변경할 수 있습니다. 외부 제공자의 처리는 각 제공자의 개인정보 정책과 적용되는 서비스 조건을 따릅니다.</p>
+<p>유료 기능의 구매 상태를 확인하고 복원하기 위해 앱 스토어 및 RevenueCat이 구매·거래 정보와 앱 사용자 식별자를 처리합니다. Football Log는 결제 카드 번호를 직접 받지 않습니다.</p>
 <h2>3. 데이터 공유</h2>
-<p>수집한 정보를 제3자에게 판매하거나 공유하지 않습니다. 공유된 매치 데이터는 사용자가 초대 코드로 직접 가입시킨 같은 그룹의 구성원에게만 보입니다.</p>
+<p>개인 정보를 판매하지 않습니다. 인증과 공유 데이터 저장에는 Supabase, 소셜 로그인에는 선택한 Google 또는 Apple, 구매 권한 확인에는 앱 스토어와 RevenueCat을 사용합니다. 선택적 음성 기능에서는 앞서 설명한 음성 인식 제공자와 Google Gemini가 처리에 참여합니다. 공유된 경기·로스터·보드는 해당 크루 구성원에게 보입니다.</p>
 
 <h2 id="account-deletion-ko">4. 데이터 보관 및 삭제</h2>
 <p>앱 내 설정 > 계정 화면에서 언제든지 다음을 직접 처리할 수 있습니다:</p>
@@ -70,25 +79,32 @@
 
 <div class="lang-block">
 <h1>Football Log Privacy Policy</h1>
-<p class="meta">Effective date: August 18, 2026 (last updated: August 20, 2026)</p>
+<p class="meta">Effective date: August 18, 2026 (last updated: October 23, 2026)</p>
 
 <p>Football Log ("the App") helps football/soccer coaches log matches, track events and stats, and plan tactics.</p>
 
 <h2>1. Local-first by default</h2>
-<p>Unless you sign in, all your data — teams, players, matches, events, tactics boards, xG presets — stays only on your device. We do not transmit or collect this data.</p>
+<p>Manually entered teams, players, matches, events, tactics boards and xG settings are stored on your device by default. If you choose online features such as crew sharing or cloud Voice interpretation, the information needed for that feature is processed as described below.</p>
 
 <h2>2. What we collect if you sign in (optional)</h2>
-<p>Signing in is entirely optional and only needed for collaborating on matches with other people. If you sign in, we collect:</p>
+<p>Signing in is not required for manual match recording. An account is used for crew collaboration, account-linked purchase access and available cloud Voice features. When you sign in, we process:</p>
 <ul>
-  <li><strong>Email address</strong> — used only to send you a one-time login code.</li>
+  <li><strong>Email address</strong> — used to identify and manage your account and to send one-time codes for email sign-in.</li>
   <li><strong>Display name</strong> — a name you choose, visible to other members of your group.</li>
-  <li><strong>Shared match data</strong> — only for matches you explicitly choose to share with a group: that match's events and clock/time state. Matches you don't share never leave your device.</li>
+  <li><strong>Shared match data</strong> — only for matches you explicitly choose to share with a group: that match's events and clock/time state. We do not automatically upload whole unshared matches. Optional Voice text processing is explained below.</li>
   <li><strong>Team roster</strong> — once a match has been shared or imported, that team's roster (player names, jersey numbers, positions, preferred foot) stays continuously synced with the rest of the group: adding or editing a player locally pushes automatically, and every group member can see it. You can also remove an individual player from the shared roster from within the app.</li>
 </ul>
-<p>We do not use ads, tracking identifiers, or analytics, and we do not collect any other personal information.</p>
+<p>We do not sell personal information for advertising. Information needed for purchase access and service operation is described below.</p>
 
+<h2>2A. Google and Apple sign-in</h2>
+<p>If you choose social sign-in, we process the provider's account identifier and email through Supabase authentication. Google may supply basic profile information such as your name and profile image. Apple may provide a relay email address if you choose Hide My Email. We use this information for sign-in, account linking and account management. Login sessions and provider identity links are retained in the app's authentication system. We do not receive your Google password or request access to Gmail, Drive, contacts or calendars.</p>
+<p>Connecting another sign-in method while signed in links it to your current Football Log account. Separate existing accounts are not automatically merged. You can revoke provider access in your Google Account's connected apps or your Apple Account's Sign in with Apple settings. Disconnecting a provider does not by itself delete your Football Log account or shared records.</p>
+<h2>2B. Optional Voice features and purchases</h2>
+<p>In builds where Voice is available, and after your consent, your device's speech service converts audio to text. Online recognition may send audio to Apple or the speech service configured on your device, such as Google. Cloud event interpretation sends the recognized text and language through our Supabase backend to Google Gemini to produce suggested match events. Football Log does not send microphone audio to Gemini. The app account identifier, request identifiers and usage records are used for authentication, usage limits and duplicate-request control. Any personal information you speak or type may be included in the text.</p>
+<p>You can withdraw Voice transmission consent from the app's Voice help and change microphone or speech recognition permissions in your device settings. External providers process information under their own privacy policies and applicable service terms.</p>
+<p>The app stores and RevenueCat process purchase or transaction information and an app user identifier to check and restore paid-feature access. Football Log does not receive your payment card number.</p>
 <h2>3. Data sharing</h2>
-<p>We do not sell or share your data with third parties. Shared match data is only visible to members of the group you explicitly joined via an invite code.</p>
+<p>We do not sell personal information. We use Supabase for authentication and shared data storage; Google or Apple for the social sign-in method you choose; and the app stores and RevenueCat for purchase access. Optional Voice features also involve the speech recognition provider and Google Gemini as described above. Shared matches, rosters and boards are visible to members of the relevant crew.</p>
 
 <h2 id="account-deletion">4. Retention and deletion</h2>
 <p>From Settings &gt; Account inside the app, you can at any time:</p>

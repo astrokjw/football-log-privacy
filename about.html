@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Football Log helps football coaches record match events, review statistics and plan tactics.">
+<title>Football Log — Match notes, stats and tactics</title>
+<style>
+:root{color-scheme:light;--ink:#12231e;--muted:#56675e;--paper:#f5f7f2;--green:#245d3c;--line:#d9e2d8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.6}
+a{color:var(--green);text-underline-offset:4px}a:focus-visible{outline:3px solid #75a048;outline-offset:4px}header,main,footer{max-width:1056px;margin:auto;padding:0 28px}
+header{display:flex;justify-content:space-between;gap:20px;align-items:center;padding-top:24px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);font-weight:750;font-size:19px}.brand img{border-radius:10px}nav{display:flex;flex-wrap:wrap;gap:20px;font-size:14px}
+.hero{padding:70px 0 54px;max-width:790px}.eyebrow{font-size:12px;font-weight:750;letter-spacing:.15em;text-transform:uppercase;color:var(--green);margin:0 0 18px}
+h1{font-size:clamp(37px,6vw,68px);line-height:1.08;letter-spacing:-.045em;margin:0 0 25px;font-weight:750}
+.lead{font-size:20px;max-width:650px;color:var(--muted);margin:0}.meta{margin:25px 0 0;font-size:14px;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding-bottom:50px}.card{border-top:3px solid var(--green);padding:22px 0 0}.number{font-size:12px;font-weight:750;color:var(--green)}
+h2{font-size:21px;line-height:1.3;letter-spacing:-.02em;margin:12px 0}p{margin:0 0 16px}.card p{font-size:15px;color:var(--muted)}
+.account{background:#e7eee3;border:1px solid var(--line);border-radius:16px;padding:28px 30px;margin-bottom:42px;display:grid;grid-template-columns:1fr 1.5fr;gap:32px}.account h2{font-size:28px;margin:0}.account p{font-size:15px}.account p:last-child{margin:0}
+.ko{padding:0 0 40px;max-width:800px}.ko h2{font-size:24px}.ko p{color:var(--muted);font-size:15px}
+footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;padding-top:24px;padding-bottom:35px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}footer div{display:flex;gap:18px;flex-wrap:wrap}
+@media(max-width:680px){header,main,footer{padding-left:20px;padding-right:20px}header{align-items:flex-start;flex-direction:column;gap:14px}nav{gap:16px}.hero{padding:44px 0 36px}.lead{font-size:18px}.cards{grid-template-columns:1fr;gap:20px;padding-bottom:32px}.card{padding-top:14px}.card h2{margin:7px 0}.account{grid-template-columns:1fr;gap:16px;padding:23px}.account h2{font-size:24px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><a class="brand" href="/about"><img src="/brand-icon.png" alt="" width="42" height="42">Football Log</a>
+<nav aria-label="Main navigation"><a href="#features">Features</a><a href="/">Privacy</a><a href="mailto:football.log.app@gmail.com">Contact</a><a href="#ko" lang="ko">한국어</a></nav></header>
+<main>
+<section class="hero"><p class="eyebrow">For football coaches and teams</p><h1>Record the match.<br>Review the details.</h1>
+<p class="lead">Log events as they happen, explore your team's stats and prepare the next match with a tactics board.</p><p class="meta">Football Log for iPhone, iPad and Android.</p></section>
+<section class="cards" id="features" aria-label="Features">
+<article class="card"><span class="number">01 / MATCHES</span><h2>Keep a clear match record</h2><p>Record goals, shots, passes, substitutions and other events with their match time and pitch position.</p></article>
+<article class="card"><span class="number">02 / STATS & TACTICS</span><h2>Review and prepare</h2><p>Review player and team statistics, shot maps and xG. Plan lineups and movements on a tactics board.</p></article>
+<article class="card"><span class="number">03 / CREWS</span><h2>Work with your coaching team</h2><p>Choose which matches and boards to share with your crew. Keep a shared roster for collaboration.</p></article>
+</section>
+<section class="account" aria-labelledby="account-title"><h2 id="account-title">Your account.<br>Your choice.</h2><div>
+<p>Manual match recording can be used without an account. Sign in to use shared crew features and other account services.</p>
+<p>Where available, Google and Apple sign-in provide another way to access your Football Log account. We use your account identifier, email and any basic profile information supplied by the provider for sign-in and account management. We do not request access to Gmail, Google Drive, contacts or calendars.</p>
+<p>Existing users can sign in with their usual email first, then connect Google or Apple in Settings. Some sign-in and Voice features are currently available in test builds.</p>
+<p>Read our <a href="/">Privacy Policy</a> for details about local data, sharing, sign-in and optional Voice processing.</p></div></section>
+<section class="ko" id="ko" lang="ko"><h2>축구 경기 기록, 스탯, 전술을 한곳에서</h2><p>Football Log는 코치와 팀을 위한 경기 기록 앱입니다. 이벤트의 시간과 위치를 기록하고, 선수·팀 통계와 슈팅 지도를 확인하고, 전술 보드로 다음 경기를 준비할 수 있습니다.</p>
+<p>수동 경기 기록은 계정 없이 사용할 수 있습니다. 크루와 공유하려면 로그인하세요. Google·Apple 로그인은 같은 Football Log 계정에 연결할 수 있는 추가 로그인 방법입니다. 일부 로그인·음성 기능은 테스트 빌드에서 제공됩니다.</p>
+<p><a href="/#privacy-ko">개인정보 처리방침</a> · <a href="mailto:football.log.app@gmail.com">문의하기</a></p></section>
+</main><footer><span>Football Log · Jinwoo Kim</span><div><a href="/">Privacy Policy / 개인정보 처리방침</a><a href="mailto:football.log.app@gmail.com">football.log.app@gmail.com</a></div></footer>
+</body></html>
