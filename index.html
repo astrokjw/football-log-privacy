@@ -34,7 +34,7 @@
 
 <div class="lang-block" id="privacy-ko">
 <h1>Football Log 개인정보처리방침</h1>
-<p class="meta">시행일: 2026년 8월 18일 (최종 수정: 2026년 10월 23일)</p>
+<p class="meta">시행일: 2026년 8월 18일 (최종 수정: 2026년 11월 7일)</p>
 
 <p>Football Log("본 앱")는 축구 코치와 지도자가 경기 기록, 이벤트/스탯 추적, 전술 보드를 관리할 수 있도록 돕는 앱입니다.</p>
 
@@ -46,7 +46,7 @@
 <ul>
   <li><strong>이메일 주소</strong> — 계정 식별과 관리, 이메일 로그인용 일회성 인증 코드 전송에 사용합니다.</li>
   <li><strong>표시 이름</strong> — 사용자가 직접 설정하는 이름으로, 같은 그룹의 다른 사용자에게 보입니다.</li>
-  <li><strong>공유한 매치 데이터</strong> — 사용자가 명시적으로 그룹에 공유하기로 선택한 매치의 이벤트와 경기 시간 정보가 서버에 저장됩니다. 공유하지 않은 매치 전체를 자동으로 업로드하지 않습니다. 선택적 음성 기능의 텍스트 처리는 아래 설명을 따릅니다.</li>
+  <li><strong>공유한 매치 데이터</strong> — 사용자가 명시적으로 그룹에 공유하기로 선택한 매치의 이벤트와 경기 시간 정보가 서버에 저장됩니다. 공유하지 않은 매치 전체를 자동으로 업로드하지 않습니다. 선택적 음성 기능의 음성·텍스트 처리는 아래 설명을 따릅니다.</li>
   <li><strong>팀 로스터</strong> — 매치를 한 번 공유하거나 가져오면, 그 팀의 로스터(선수 이름, 등번호, 포지션, 주발)가 그룹의 다른 구성원과 계속 동기화됩니다. 이후 로컬에서 선수 정보를 추가·수정하면 자동으로 서버에 반영되어 그룹 구성원 모두에게 보입니다. 앱 내에서 특정 선수를 공유 로스터에서 제거할 수도 있습니다.</li>
 </ul>
 <p>광고용으로 개인 정보를 판매하지 않습니다. 구매 권한과 서비스 운영에 필요한 정보 처리는 아래와 같습니다.</p>
@@ -55,13 +55,15 @@
 <p>이 기능을 선택하면 제공자의 계정 식별자와 이메일 주소를 Supabase 인증 서비스를 통해 처리합니다. Google은 이름과 프로필 사진 등 기본 프로필 정보를 제공할 수 있습니다. Apple의 이메일 숨기기를 선택하면 실제 이메일 대신 중계 주소를 받을 수 있습니다. 이 정보는 로그인, 계정 연결 및 계정 관리에 사용하며, 로그인 세션과 제공자 연결 정보는 앱의 인증 시스템에 보관됩니다. Google 비밀번호를 받지 않으며 Gmail, Drive, 연락처, 캘린더 접근 권한은 요청하지 않습니다.</p>
 <p>앱에 로그인한 상태에서 다른 로그인 방법을 연결하면 현재 Football Log 계정에 연결됩니다. 서로 다른 기존 계정을 자동으로 합치지는 않습니다. Google 계정의 연결된 앱 관리 또는 Apple 계정의 Apple로 로그인 설정에서 제공자 접근을 취소할 수 있습니다. 제공자 연결 해제만으로 Football Log 계정과 공유 기록이 자동 삭제되지는 않습니다.</p>
 <h2>2B. 선택적 음성 기능과 구매</h2>
-<p>음성 기능이 제공되는 빌드에서 사용자가 동의하면, 기기의 음성 인식 서비스가 음성을 텍스트로 변환합니다. 인터넷 음성 인식은 Apple 또는 기기에 설정된 Google 등 음성 서비스로 오디오를 보낼 수 있습니다. Football Log의 클라우드 해석은 인식한 텍스트와 언어 정보를 Supabase 서버를 거쳐 Google Gemini로 보내 경기 이벤트 후보를 만듭니다. Football Log는 마이크 오디오를 Gemini로 보내지 않습니다. 앱의 계정 식별자, 요청 식별자와 사용량 정보는 인증, 사용 한도와 중복 요청 제어에 사용됩니다. 텍스트에 직접 말하거나 입력한 개인정보는 그 텍스트에 포함될 수 있습니다.</p>
-<p>음성 전송 동의는 앱의 Voice 도움말에서 철회할 수 있으며, 기기 설정에서 마이크·음성 인식 권한을 변경할 수 있습니다. 외부 제공자의 처리는 각 제공자의 개인정보 정책과 적용되는 서비스 조건을 따릅니다.</p>
-<p>유료 기능의 구매 상태를 확인하고 복원하기 위해 앱 스토어 및 RevenueCat이 구매·거래 정보와 앱 사용자 식별자를 처리합니다. Football Log는 결제 카드 번호를 직접 받지 않습니다.</p>
+<p>경기 중 녹음한 음성은 먼저 기기에 저장됩니다. 녹음, 재생 및 수동 이벤트 입력·검토에는 클라우드 AI가 필요하지 않습니다. 사용자가 앱에서 음성 전송에 동의하고 AI 검토를 시작하면, 저장된 음성 또는 입력·수정한 텍스트와 언어 정보를 Football Log의 Supabase 서버를 거쳐 Google Gemini에 보내 텍스트 인식과 경기 이벤트 해석을 처리합니다. 말하거나 입력한 선수 이름 등 개인정보가 음성이나 텍스트에 포함될 수 있습니다. AI 결과는 사용자가 확인·수정한 뒤 경기 기록으로 확정합니다.</p>
+<p>Football Log 서버는 음성 파일을 처리 중에만 사용하며 저장하지 않습니다. 재시도 복구를 위해 인식된 텍스트와 AI 결과를 임시 보관하며, 24시간 후 캐시 사용을 중단하고 정기 삭제합니다. 계정 식별자, 요청 식별자, 사용량과 이용권 거래 정보는 인증, 이용권 차감·반환, 중복 요청 방지 및 서비스 운영에 사용합니다. 일반 운영 로그에는 음성이나 인식 문장 전체를 기록하지 않습니다. Google 등 외부 제공자의 보관·처리는 해당 제공자의 개인정보 정책과 적용되는 서비스 조건을 따릅니다.</p>
+<p>음성 전송 동의는 앱의 Voice 옵션에서 철회할 수 있으며, 기기 설정에서 마이크·음성 인식 권한을 변경할 수 있습니다. 기기의 실시간 음성 인식 기능을 사용하는 경우, 온라인 인식은 Apple 또는 기기에 설정된 Google 등 음성 서비스로 오디오를 보낼 수 있습니다.</p>
+<p>AI 검토는 구매한 이용권을 사용하며, 새 검토 또는 재해석 완료 시 1회가 차감됩니다. 동일 요청 복구는 중복 차감하지 않으며 처리 실패 시 이용권을 반환합니다. 이용권은 만료되지 않습니다. 수동 입력·검토는 이용권 없이 사용할 수 있습니다. 앱 스토어 및 RevenueCat은 구매 확인·복원·환불 처리를 위해 구매·거래 정보와 앱 사용자 식별자를 처리합니다. Football Log는 결제 카드 번호를 직접 받지 않습니다.</p>
 <h2>3. 데이터 공유</h2>
 <p>개인 정보를 판매하지 않습니다. 인증과 공유 데이터 저장에는 Supabase, 소셜 로그인에는 선택한 Google 또는 Apple, 구매 권한 확인에는 앱 스토어와 RevenueCat을 사용합니다. 선택적 음성 기능에서는 앞서 설명한 음성 인식 제공자와 Google Gemini가 처리에 참여합니다. 공유된 경기·로스터·보드는 해당 크루 구성원에게 보입니다.</p>
 
 <h2 id="account-deletion-ko">4. 데이터 보관 및 삭제</h2>
+<p>로컬 녹음은 사용자가 삭제하거나 해당 이벤트를 검토·확정하여 저장할 때까지 기기에 보관합니다. AI 처리가 실패한 녹음도 이후 재검토할 수 있도록 남겨 둡니다. 클라우드 AI 결과 캐시의 보관 기간은 위 2B항을 따릅니다. 계정 삭제 시 Football Log 계정에 연결된 이용권·구매 기록도 삭제합니다. 앱 스토어, RevenueCat 및 기타 제공자가 보관하는 거래·운영 정보에는 각 제공자의 보관 정책과 법적 의무가 적용됩니다.</p>
 <p>앱 내 설정 > 계정 화면에서 언제든지 다음을 직접 처리할 수 있습니다:</p>
 <ul>
   <li>공유한 매치 취소(언쉐어)</li>
@@ -79,7 +81,7 @@
 
 <div class="lang-block">
 <h1>Football Log Privacy Policy</h1>
-<p class="meta">Effective date: August 18, 2026 (last updated: October 23, 2026)</p>
+<p class="meta">Effective date: August 18, 2026 (last updated: November 7, 2026)</p>
 
 <p>Football Log ("the App") helps football/soccer coaches log matches, track events and stats, and plan tactics.</p>
 
@@ -91,7 +93,7 @@
 <ul>
   <li><strong>Email address</strong> — used to identify and manage your account and to send one-time codes for email sign-in.</li>
   <li><strong>Display name</strong> — a name you choose, visible to other members of your group.</li>
-  <li><strong>Shared match data</strong> — only for matches you explicitly choose to share with a group: that match's events and clock/time state. We do not automatically upload whole unshared matches. Optional Voice text processing is explained below.</li>
+  <li><strong>Shared match data</strong> — only for matches you explicitly choose to share with a group: that match's events and clock/time state. We do not automatically upload whole unshared matches. Optional Voice audio and text processing is explained below.</li>
   <li><strong>Team roster</strong> — once a match has been shared or imported, that team's roster (player names, jersey numbers, positions, preferred foot) stays continuously synced with the rest of the group: adding or editing a player locally pushes automatically, and every group member can see it. You can also remove an individual player from the shared roster from within the app.</li>
 </ul>
 <p>We do not sell personal information for advertising. Information needed for purchase access and service operation is described below.</p>
@@ -100,13 +102,15 @@
 <p>If you choose social sign-in, we process the provider's account identifier and email through Supabase authentication. Google may supply basic profile information such as your name and profile image. Apple may provide a relay email address if you choose Hide My Email. We use this information for sign-in, account linking and account management. Login sessions and provider identity links are retained in the app's authentication system. We do not receive your Google password or request access to Gmail, Drive, contacts or calendars.</p>
 <p>Connecting another sign-in method while signed in links it to your current Football Log account. Separate existing accounts are not automatically merged. You can revoke provider access in your Google Account's connected apps or your Apple Account's Sign in with Apple settings. Disconnecting a provider does not by itself delete your Football Log account or shared records.</p>
 <h2>2B. Optional Voice features and purchases</h2>
-<p>In builds where Voice is available, and after your consent, your device's speech service converts audio to text. Online recognition may send audio to Apple or the speech service configured on your device, such as Google. Cloud event interpretation sends the recognized text and language through our Supabase backend to Google Gemini to produce suggested match events. Football Log does not send microphone audio to Gemini. The app account identifier, request identifiers and usage records are used for authentication, usage limits and duplicate-request control. Any personal information you speak or type may be included in the text.</p>
-<p>You can withdraw Voice transmission consent from the app's Voice help and change microphone or speech recognition permissions in your device settings. External providers process information under their own privacy policies and applicable service terms.</p>
-<p>The app stores and RevenueCat process purchase or transaction information and an app user identifier to check and restore paid-feature access. Football Log does not receive your payment card number.</p>
+<p>Match recordings are saved on your device first. Recording, playback and manual event entry or review do not require cloud AI. After you give consent in the app and start AI review, Football Log sends the saved audio or text you enter or edit, along with the language, through its Supabase backend to Google Gemini for transcription and event interpretation. Personal information, such as player names you speak or type, may be included. You review and can edit the AI result before confirming it as a match event.</p>
+<p>The Football Log backend uses audio during processing and does not store audio files. It temporarily caches transcribed text and AI results for retry recovery, stops serving that cache after 24 hours and removes it through scheduled cleanup. Account identifiers, request identifiers, usage and credit transaction records support authentication, credit charges and refunds, duplicate-request control and service operation. Routine operational logs do not contain audio or full transcripts. Retention and processing by Google and other external providers are governed by their privacy policies and applicable service terms.</p>
+<p>You can withdraw Voice transmission consent in the app's Voice options and change microphone or speech recognition permissions in your device settings. If you use device-based live speech recognition, online recognition may send audio to Apple or the speech service configured on your device, such as Google.</p>
+<p>AI review uses purchased credits: each completed new review or re-interpretation uses 1 credit. Recovering the same request is not charged again, and failed processing is refunded. Credits do not expire. Manual entry and review work without credits. The app stores and RevenueCat process purchase or transaction information and an app user identifier to verify purchases, restore access and handle refunds. Football Log does not receive your payment card number.</p>
 <h2>3. Data sharing</h2>
 <p>We do not sell personal information. We use Supabase for authentication and shared data storage; Google or Apple for the social sign-in method you choose; and the app stores and RevenueCat for purchase access. Optional Voice features also involve the speech recognition provider and Google Gemini as described above. Shared matches, rosters and boards are visible to members of the relevant crew.</p>
 
 <h2 id="account-deletion">4. Retention and deletion</h2>
+<p>Local recordings remain on your device until you delete them or confirm and save the corresponding reviewed event. Recordings remain available for later review if AI processing fails. Cloud AI result caching follows section 2B above. Deleting your account also deletes its credit and purchase records held by Football Log. Transaction and operational records held by the app stores, RevenueCat and other providers remain subject to their own retention policies and legal obligations.</p>
 <p>From Settings &gt; Account inside the app, you can at any time:</p>
 <ul>
   <li>Unshare a match</li>
